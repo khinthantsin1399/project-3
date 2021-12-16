@@ -79,7 +79,7 @@ $postid=intval($_GET['nid']);
   </head>
     <!-- Navigation -->
 <style>
-<?php include('style1.css');?>
+<?php include('main.css');?>
 </style>
     <body>
    <?php include('header.php');?>

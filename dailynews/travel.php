@@ -34,7 +34,7 @@ include('config.php');
       
   </head>
 <style>
-<?php include('style1.css');?>
+<?php include('main.css');?>
 </style>
     <body>
 

@@ -1,0 +1,116 @@
+ .navbar-brand img{
+        padding-left:100px;
+        margin-left: 60px;
+        max-width: 70%;
+         height: 50%;
+    }
+    
+ .navbar{
+    background-color: white;
+    border-bottom: 1px solid black;
+    opacity: 1;
+    margin:0px ;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    height: 80px;
+}
+.navbar-nav li a{
+    
+    padding-left: 30px;
+    padding-top: 20px;
+    color: black;
+    font-family: times;
+    font-size: 1em;
+    font-weight: bold;
+}
+.top{
+    background-color:black ;
+   margin-top: 0;
+    height: 30px;
+}
+.top p{
+    color: white;
+
+
+}
+        .d-flex{
+        margin-right: 100px;
+        }
+        .social-icon {
+    height: 40px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#dc0092;
+    font-size: 14px;
+    border: none;
+    margin-right: 60px;
+    cursor: pointer;
+        font-size:20px;
+}
+
+.social-twitter {
+    background-color: white;
+}
+        
+   
+.social-facebook {
+    background-color: white;
+        }
+
+.social-instagram {
+    background-color: white;
+}
+
+.social-icon i {
+    transition: 0.4s all
+}
+
+         .footerContent h3{
+             margin-top: 50px;
+        color: white;
+        }
+        .container .row hr:not(.footerHr){
+            color: white;
+            border: 0;
+            height: 5px;
+            background: white;
+            background: linear-gradient(to right,#dc0092 10%,white 80%);
+            width: 100%;
+            margin-bottom: 40px;
+        }
+        .footerContent p{
+            text-align: left;
+            font-size: 0.9em;
+            color: white;
+        }
+        .container .row .icon{
+            
+            color:#dc0092;
+            font-size: 35px;
+        }
+        .container p span .text{
+            text-align: left;
+        }
+.container .row .card-title .card-text{
+    color: black;
+}
+
+.input-group {
+    
+    border-radius: 40px;
+}
+button .subscribe{
+    padding-top: 20px;
+    color: white;
+    background-color:#dc0092; 
+}
+.list-unstyled li a{
+    
+    font-size: 0.8em;
+    text-decoration: none;
+    color: white;
+    padding-bottom: 50px;
+}
