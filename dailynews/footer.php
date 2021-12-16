@@ -46,7 +46,7 @@ while ($result=mysqli_fetch_array($query1)) {
     </div>
     <div class="col-md-8">
                       <a href="news-details.php?nid=<?php echo htmlentities($result['pid'])?>" style="color:white;text-decoration:none;font-size:.8em;"><?php echo htmlentities($result['posttitle']);?></a><br>
-        <a class="badge  text-decoration-none link-light" href="" style="color:#fff;background:#dc0092;"><?php echo htmlentities($result['category']);?></a>
+        <a class="badge  text-decoration-none link-light" href="" style="color:#fff;background:#dc0092;border-radius:20px;"><?php echo htmlentities($result['category']);?></a>
 
          <div class="postDate" style="color:white;">
               <?php echo htmlentities($result['postingdate']);?>

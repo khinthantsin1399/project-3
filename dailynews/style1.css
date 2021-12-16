@@ -68,18 +68,20 @@
     transition: 0.4s all
 }
 
-        .container .row h2{
+         .footerContent h3{
+             margin-top: 50px;
         color: white;
         }
-        .container .row hr{
+        .container .row hr:not(.footerHr){
             color: white;
             border: 0;
             height: 5px;
             background: white;
             background: linear-gradient(to right,#dc0092 10%,white 80%);
             width: 100%;
+            margin-bottom: 40px;
         }
-        .container .row p{
+        .footerContent p{
             text-align: left;
             font-size: 0.9em;
             color: white;
@@ -92,3 +94,23 @@
         .container p span .text{
             text-align: left;
         }
+.container .row .card-title .card-text{
+    color: black;
+}
+
+.input-group {
+    
+    border-radius: 40px;
+}
+button .subscribe{
+    padding-top: 20px;
+    color: white;
+    background-color:#dc0092; 
+}
+.list-unstyled li a{
+    
+    font-size: 0.8em;
+    text-decoration: none;
+    color: white;
+    padding-bottom: 50px;
+}

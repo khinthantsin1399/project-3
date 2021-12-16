@@ -78,7 +78,7 @@ $_SESSION['catid']=intval($_GET['catid']);
         $total_pages = ceil($total_rows / $no_of_records_per_page);*/
 
 
-$query=mysqli_query($con,"select tblposts.id as pid,tblposts.PostTitle as posttitle,tblposts.PostImage,tblcategory.CategoryName as category,tblposts.PostDetails as postdetails,tblposts.PostingDate as postingdate,tblposts.PostUrl as url from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId  where tblposts.CategoryId= 1 and tblposts.Is_Active=1 order by tblposts.id desc limit 3");
+$query=mysqli_query($con,"select tblposts.id as pid,tblposts.PostTitle as posttitle,tblposts.PostImage,tblcategory.CategoryName as category,tblposts.PostDetails as postdetails,tblposts.PostingDate as postingdate,tblposts.PostUrl as url from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId  where tblposts.CategoryId= 2 and tblposts.Is_Active=1 order by tblposts.id desc limit 3");
 
 $rowcount=mysqli_num_rows($query);
 if($rowcount==0)
