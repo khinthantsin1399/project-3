@@ -67,17 +67,19 @@
 .social-icon i {
     transition: 0.4s all
 }
-
+footer{
+    background-color: black;
+    opacity: 0.9;
+}
          .footerContent h3{
              margin-top: 50px;
         color: white;
         }
         .container .row hr:not(.footerHr){
             color: white;
-            border: 0;
-            height: 5px;
-            background: white;
-            background: linear-gradient(to right,#dc0092 10%,white 80%);
+            height: 4px;
+            opacity: 0.9;
+            background: linear-gradient( to right,#dc0092 15%,white 10%);
             width: 100%;
             margin-bottom: 40px;
         }
@@ -112,5 +114,41 @@ button .subscribe{
     font-size: 0.8em;
     text-decoration: none;
     color: white;
-    padding-bottom: 50px;
+    
+}
+.pagination{
+   
+}
+.page-link{
+    color: #dc0092;
+    padding: 5px 10px;
+     box-shadow: 5px 6px 0.5em rgba(0,0,0,0.3);
+}
+.copyright{
+    background-color: black;
+    bottom: 0;
+    height: 50px;
+    font-size: 0.7em;
+}
+.copyright p{
+    float: left;
+    padding-left: 120px;
+    padding-top: 15px;
+    
+
+}
+.copyright .footerLink{
+    padding-left: 65%;
+}
+.copyright .footerLink ul li{
+    display: inline-block;
+    
+}
+
+.copyright .footerLink ul li a{
+text-decoration: none;
+    color: white;
+    padding: 15px;
+    float: right;
+    
 }

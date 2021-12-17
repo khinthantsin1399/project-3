@@ -98,10 +98,24 @@ while ($result=mysqli_fetch_array($query1)) {
           
           
           
+     </div>
+</footer>
           
-          
-          
-        <p class="m-0 text-center text-white">Copyright &copy; Team-5 <?php echo date('Y');?></p>
-      </div>
+         <div class="copyright"> 
+             <p class="m-0 text-center text-white">Copyright &copy; By DAILYNEWS.com <?php echo date('Y');?> .All Right Reserved</p>
+             <div class="footerLink">
+ <ul><li><a href="business.php">Business</a></li>
+    <li><a href="fashion.php">Fashion</a></li>
+      <li><a href="lifestyle.php">Lifestyle</a></li>
+           <li><a href="travel.php">Travel</a></li>
+                 </ul>
+             </div> 
+</div>
+
+
+
+      
+
+   
       <!-- /.container -->
-    </footer>
+    
