@@ -67,6 +67,10 @@
 .social-icon i {
     transition: 0.4s all
 }
+
+.card{
+  box-shadow: 0px 0 7px #bdbdbd;    
+}
 footer{
     background-color: black;
     opacity: 0.9;
