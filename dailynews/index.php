@@ -42,10 +42,10 @@ include('config.php');
    <?php include('header.php');?>
       
       
+   <?php include('recentpost.php');?>
       
       
-      
-      
+                    
       
       
  <?php include('footer.php');?>

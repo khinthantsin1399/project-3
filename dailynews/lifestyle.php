@@ -90,7 +90,7 @@ while ($row=mysqli_fetch_array($query)) {
 
 
 ?>
-<h1><?php echo htmlentities($row['category']);?> News</h1>
+<h3><?php echo htmlentities($row['category']);?> News</h3><hr>
        <a href="news-details.php?nid=<?php echo htmlentities($row['pid'])?>" style="text-decoration:none;color:black;">     <div class="card mb-4">
              <img class="card-img-top" src="images/<?php echo htmlentities($row['PostImage']);?>" alt="<?php echo htmlentities($row['posttitle']);?>" height="400">
             <div class="card-body">
@@ -120,6 +120,7 @@ while ($row=mysqli_fetch_array($query)) {
             
    <?php } ?>   
           </div>
+             <?php include('sidebar.php');?>
           </div>
         </div>
       

@@ -16,7 +16,7 @@ $email=$_POST['email'];
 $comment=$_POST['comment'];
 $postid=intval($_GET['nid']);
 $st1='0';
-$query=mysqli_query($con,"insert into tblcomments(postId,name,email,comment,status) values('$postid','$name','$email','$comment','$st1')");
+$query=mysqli_query($con,"insert into tblcomments(postId,name,email,comment,status) values('$postid','$name','$email','$comment',1)");
 if($query):
   echo "<script>alert('comment successfully submit.');</script>";
   unset($_SESSION['token']);
@@ -123,10 +123,51 @@ $pt=$row['postdetails'];
               echo  (substr($pt,0));?></p>
              
             </div>
-            <div class="card-footer text-muted">
-              
-           
+           <div class="card-footer">
+             <!---Comment Section --->
+             <h5>Leave a Comment:</h5>
+            
+              <form name="Comment" method="post">
+      <input type="hidden" name="csrftoken" value="<?php echo htmlentities($_SESSION['token']); ?>" />
+ <div class="input-group">
+<input type="text" name="name" class="form-control" placeholder="Enter your fullname" required>
+</div><br>
+
+ <div class="input-group">
+ <input type="email" name="email" class="form-control"  placeholder="Enter your Valid email" required>
+ </div><br>
+
+
+                <div class="input-group">
+                  <textarea class="form-control" name="comment" rows="3" placeholder="Comment" required></textarea>
+                </div><br>
+                <button type="submit" class="btn" name="submit" style="background:#dc0092;border:none;border-radius:20px;color:white;">Submit</button>
+              </form>
+        
+               
+               
+               
+               
             </div>
+              <?php 
+ $sts=1;
+ $query=mysqli_query($con,"select name,comment,postingDate from  tblcomments where postId='$pid' and status=1");
+while ($row=mysqli_fetch_array($query)) {
+?>
+             
+<div class="media mb-4">
+     <div class="row">
+                  <div class="col-md-1">
+    <img class="d-flex mr-3 rounded-circle" src="images/usericon.png" alt=""></div>
+                      <div class="col-md-11">
+            <div class="media-body">
+              <h5 class="mt-0"><?php echo htmlentities($row['name']);?> <br />
+                  <span style="font-size:11px;"><b>at</b> <?php echo htmlentities($row['postingDate']);?></span>
+            </h5>
+           
+                <?php echo htmlentities($row['comment']);?>      </div>      </div>
+                  </div><hr class="footerHr" style="border-top:1px solid grey;margin-top:30px;margin-bottom:0;"></div>
+<?php } ?>
           </div>
 <?php } ?>
        
@@ -138,52 +179,18 @@ $pt=$row['postdetails'];
         </div>
 
         <!-- Sidebar Widgets Column -->
-    
+    <?php include('sidebar.php');?>
       </div>
       <!-- /.row -->
-<!---Comment Section --->
-
- <div class="row" style="margin-top: -8%">
-   <div class="col-md-8">
-<div class="card my-4">
-            <h5 class="card-header">Leave a Comment:</h5>
-            <div class="card-body">
-              <form name="Comment" method="post">
-      <input type="hidden" name="csrftoken" value="<?php echo htmlentities($_SESSION['token']); ?>" />
- <div class="form-group">
-<input type="text" name="name" class="form-control" placeholder="Enter your fullname" required>
-</div>
-
- <div class="form-group">
- <input type="email" name="email" class="form-control" placeholder="Enter your Valid email" required>
- </div>
 
 
-                <div class="form-group">
-                  <textarea class="form-control" name="comment" rows="3" placeholder="Comment" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary" name="submit">Submit</button>
-              </form>
-            </div>
+
+          
           </div>
 
   <!---Comment Display Section --->
 
- <?php 
- $sts=1;
- $query=mysqli_query($con,"select name,comment,postingDate from  tblcomments where postId='$pid' and status='$sts'");
-while ($row=mysqli_fetch_array($query)) {
-?>
-<div class="media mb-4">
-            <img class="d-flex mr-3 rounded-circle" src="images/usericon.png" alt="">
-            <div class="media-body">
-              <h5 class="mt-0"><?php echo htmlentities($row['name']);?> <br />
-                  <span style="font-size:11px;"><b>at</b> <?php echo htmlentities($row['postingDate']);?></span>
-            </h5>
-           
-             <?php echo htmlentities($row['comment']);?>            </div>
-          </div>
-<?php } ?>
+ 
 
         </div>
       </div>
