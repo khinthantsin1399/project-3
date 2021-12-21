@@ -3,7 +3,7 @@
           
           
           <div class="row footerContent">
-          <div class="col-md-4 col-sm-4 col-xs-12 ">
+          <div class="col-md-4 col-sm-4 col-xs-4 ">
               <h3>ABOUT US</h3><hr>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
               
@@ -32,7 +32,7 @@
             <hr class="footerHr" style="border-top:1px solid white;">
               </div>
               
-            <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="col-md-4 col-sm-4 col-xs-4">
               <h3>POPULAR POST</h3><hr>
                 
                 <?php
@@ -41,12 +41,12 @@ while ($result=mysqli_fetch_array($query1)) {
 
 ?>
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-4 col-sm-4 col-xs-12">
       <a href="news-details.php?nid=<?php echo htmlentities($result['pid'])?>"> <img src="images/<?php echo htmlentities($result['PostImage']);?>" alt="<?php echo htmlentities($result['posttitle']);?>" width="110" height="100"></a>
     </div>
-    <div class="col-md-8">
+    <div class="col-md-8 col-sm-8 col-xs-12">
                       <a href="news-details.php?nid=<?php echo htmlentities($result['pid'])?>" style="color:white;text-decoration:none;font-size:.8em;"><?php echo htmlentities($result['posttitle']);?></a><br>
-        <a class="badge  text-decoration-none link-light" href="" style="color:#fff;background:#dc0092;border-radius:20px;"><?php echo htmlentities($result['category']);?></a>
+        <a class="badge  text-decoration-none link-light" href="<?php echo htmlentities($result['category']);?>.php" style="color:#fff;background:#dc0092;border-radius:20px;"><?php echo htmlentities($result['category']);?></a>
 
          <div class="postDate" style="color:white;">
               <?php echo htmlentities($result['postingdate']);?>
@@ -55,7 +55,7 @@ while ($result=mysqli_fetch_array($query1)) {
     </div>
                   
     
-                </div><hr class="footerHr" style="border-top:1px solid white;margin-top:30px;">
+                </div><hr class="footerHr" style="">
             <?php } ?>
                     
                 
@@ -64,14 +64,14 @@ while ($result=mysqli_fetch_array($query1)) {
               
               
               
-              <div class="col-md-4 col-sm-4 col-xs-12">
+              <div class="col-md-4 col-sm-4 col-xs-4">
               <h3>NEWSLETTER</h3><hr>
                   <div class="input-group mb-4" >
                       <input type="text" placeholder="Enter Your Email Address" class="form-control" style="border-radius:20px;border:none;"></div>
                   <a href="#" class="btn subscribe" style="color:white;text-decoration:none;background:#dc0092;border-radius:20px;font-size:0.7em;padding:5px 20px;">SUBSCRIBE</a><hr class="footerHr" style="border-top:1px solid white;margin-top:40px;">
              
               <h3 style="margin-bottom:30px;">CATEGORIES</h3>
-                  <div class="row">
+                  <div class="row categories">
                   <div class="col-md-6" >
                       <ul class="list-unstyled" >
                           <li>  <a href="business.php">BUSINESS</a></li>
@@ -102,14 +102,19 @@ while ($result=mysqli_fetch_array($query1)) {
 </footer>
           
          <div class="copyright"> 
-             <p class="m-0 text-center text-white">Copyright &copy; By DAILYNEWS.com <?php echo date('Y');?> .All Right Reserved</p>
+             <div class="row">
+                 <div class="col-md-6 c0l-sm-6 col-xs-6">
+                     <p class="m-0 text-center text-white">Copyright &copy; By DAILYNEWS.com <?php echo date('Y');?> .All Right Reserved</p></div>
+                 <div class="col-md-6 col-sm-6 col-xs-6">
              <div class="footerLink">
  <ul><li><a href="business.php">Business</a></li>
     <li><a href="fashion.php">Fashion</a></li>
       <li><a href="lifestyle.php">Lifestyle</a></li>
            <li><a href="travel.php">Travel</a></li>
                  </ul>
-             </div> 
+             </div>
+                 </div>
+             </div>
 </div>
 
 

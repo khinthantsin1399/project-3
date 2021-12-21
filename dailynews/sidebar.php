@@ -1,4 +1,4 @@
- <div class="col-md-4 col-sm-4 col-xs-12 sidebar">
+ <div class="col-md-4 col-sm-4  sidebar">
               <h3>RECENT NEWS</h3><hr>
                 
                 <?php
@@ -7,14 +7,14 @@ while ($result=mysqli_fetch_array($query1)) {
 
 ?>
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-4 col-sm-4">
       <a href="news-details.php?nid=<?php echo htmlentities($result['pid'])?>"> <img src="images/<?php echo htmlentities($result['PostImage']);?>" alt="<?php echo htmlentities($result['posttitle']);?>" width="110" height="100"></a>
     </div>
-    <div class="col-md-8">
-                      <a href="news-details.php?nid=<?php echo htmlentities($result['pid'])?>" style="color:black;text-decoration:none;font-size:1em;font-weight:bold;"><?php echo htmlentities($result['posttitle']);?></a><br>
-        <a class="badge  text-decoration-none link-light" href="" style="color:#fff;background:#dc0092;border-radius:20px;"><?php echo htmlentities($result['category']);?></a>
+    <div class="col-md-8 col-sm-8">
+                      <a href="news-details.php?nid=<?php echo htmlentities($result['pid'])?>" style=""><?php echo htmlentities($result['posttitle']);?></a><br>
+        <a class="badge  text-decoration-none link-light" href="<?php echo htmlentities($result['category']);?>.php" style="color:#fff;background:#dc0092;border-radius:20px;"><?php echo htmlentities($result['category']);?></a>
 
-         <div class="postDate" style="color:black;font-size:0.8em;">
+         <div class="postDate" style="">
               <?php echo htmlentities($result['postingdate']);?>
            
             </div>
@@ -33,14 +33,14 @@ while ($result=mysqli_fetch_array($query1)) {
 
 ?>
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-4 col-sm-4">
       <a href="news-details.php?nid=<?php echo htmlentities($result['pid'])?>"> <img src="images/<?php echo htmlentities($result['PostImage']);?>" alt="<?php echo htmlentities($result['posttitle']);?>" width="110" height="100"></a>
     </div>
-    <div class="col-md-8">
-                      <a href="news-details.php?nid=<?php echo htmlentities($result['pid'])?>" style="color:black;text-decoration:none;font-size:1em;font-weight:bold;"><?php echo htmlentities($result['posttitle']);?></a><br>
-        <a class="badge  text-decoration-none link-light" href="" style="color:#fff;background:#dc0092;border-radius:20px;"><?php echo htmlentities($result['category']);?></a>
+    <div class="col-md-8 col-sm-8">
+                      <a href="news-details.php?nid=<?php echo htmlentities($result['pid'])?>" ><?php echo htmlentities($result['posttitle']);?></a><br>
+        <a class="badge  text-decoration-none link-light" href="<?php echo htmlentities($result['category']);?>.php" style="color:#fff;background:#dc0092;border-radius:20px;"><?php echo htmlentities($result['category']);?></a>
 
-         <div class="postDate" style="color:black;font-size:0.8em;">
+         <div class="postDate">
               <?php echo htmlentities($result['postingdate']);?>
            
             </div>
